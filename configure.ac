@@ -2032,9 +2032,7 @@ fi
 dnl ============================================================================
 dnl Enable background threads if possible.
 
-if test "x${have_pthread}" = "x1" -a "x${have_dlsym}" = "x1" \
-    -a "x${je_cv_os_unfair_lock}" != "xyes" \
-    -a "x${je_cv_osspin}" != "xyes" ; then
+if test "x${have_pthread}" = "x1"; then
   AC_DEFINE([JEMALLOC_BACKGROUND_THREAD])
 fi
 
